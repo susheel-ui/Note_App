@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="lightwhite">#CDC9C9</color>
+
+    <color name="creamback">#fff8de</color>
+    <color name="richblack">#1b1b1f</color>
+    <color name="richskyblue">#d7d7f1</color>
+    <color name="lightBlack">#252529</color>
+    <color name="morelightBlack">#6B6B71</color>
+
+
+</resources>
