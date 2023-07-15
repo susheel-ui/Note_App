@@ -83,12 +83,6 @@ public class MyDBHalper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         List<notes> list = new ArrayList<>();
        Cursor cursor =  db.rawQuery("Select * from "+TABLE_NOTES,null);
-//        for (int i=0;i<=cursor.getCount();i++){
-//            cursor.moveToNext();
-//            String title = cursor.getString(1);
-//            String body = cursor.getString(2);
-//            list.add(new notes(title,body));
-//        }
         for (int i = 0;i<cursor.getCount();i++){
             if(cursor.moveToNext()){
                 String title = cursor.getString(1);

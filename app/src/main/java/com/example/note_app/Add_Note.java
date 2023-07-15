@@ -63,8 +63,7 @@ public class Add_Note extends Fragment {
         binding.btncancle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                binding.AddNoteBodyInput.setText("");
-                binding.AddNoteTitleInput.setText("");
+                reset_fields();
             }
         });
         binding.btnsave.setOnClickListener(new View.OnClickListener() {
@@ -75,6 +74,7 @@ public class Add_Note extends Fragment {
                 MyDBHalper dbHalper = new MyDBHalper(getContext());
                 dbHalper.insert_note(title,body);
                 dbHalper.close();
+                reset_fields();
             }
         });
 
@@ -85,5 +85,9 @@ public class Add_Note extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return binding.getRoot();
+    }
+    public void reset_fields(){
+        binding.AddNoteBodyInput.setText("");
+        binding.AddNoteTitleInput.setText("");
     }
 }
